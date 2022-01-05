@@ -15,6 +15,7 @@ class Settings():
         self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = 60, 60, 60
+        self.bullet_speed_factor = 1
         # 屏幕上可以同时出现多少颗子弹
         self.bullets_allowed = 6
 

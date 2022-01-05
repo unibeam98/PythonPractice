@@ -113,9 +113,12 @@ def change_fleet_direction(ai_settings, aliens):
 '''更新屏幕信息'''
 
 
-def update_bullets(bullets):
+def update_bullets(aliens, bullets):
     """更新子弹的位置，并删除已消失的子弹"""
     bullets.update()
+    # 检查是否有子弹击中了外星人
+    # 如果是这样， 就删除相应的外星人和子弹
+    collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
 
     # 删除屏幕外的子弹
     for bullet in bullets.copy():
@@ -123,7 +126,7 @@ def update_bullets(bullets):
             bullets.remove(bullet)
 
 
-def update_aliens(ai_settings, screen, ship, aliens, bullets):
+def update_aliens(ai_settings, aliens):
     """检查是否有外星人位于屏幕边缘，并更新整群外星人的位置"""
     check_fleet_edges(ai_settings, aliens)
     aliens.update()
