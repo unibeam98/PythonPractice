@@ -16,9 +16,10 @@ if __name__ == '__main__':
     print("Repoitories returned: ", len(repo_dicts))
 
     # 研究第一个仓库
-    repo_dict = repo_dicts[0]
-    print("\nkeys: ", len(repo_dict))
-    for key in sorted(repo_dict.keys()):
-        print(key)
-    # 处理结果
-    print(response_dict.keys())
+    # print("\nSelected information about each repository: ")
+    # for repo_dict in repo_dicts:
+    #     print('\nName: ', repo_dict['name'])
+    #     print('Owner: ', repo_dict['owner']['login'])
+    #     print('Stars: ', repo_dict['stargazers_count'])
+    #     print('Repository: ', repo_dict['html_url'])
+    #     print('Description: ', repo_dict['description'])
